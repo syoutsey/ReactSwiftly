@@ -39,7 +39,7 @@ class ViewController: UIViewController {
             .observeOn(UIScheduler())
         
         searchResults.start({ results in
-            self.nameLabel.text = "Hello " + results.value! + "!"
+            self.nameLabel.text = "Hello " + results.value!
         })
     }
     
