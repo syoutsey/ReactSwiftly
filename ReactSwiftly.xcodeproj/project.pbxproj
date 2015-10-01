@@ -15,6 +15,12 @@
 		22C6195E1BBD08FF00AAF114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C6195C1BBD08FF00AAF114 /* LaunchScreen.storyboard */; };
 		22C619691BBD08FF00AAF114 /* ReactSwiftlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C619681BBD08FF00AAF114 /* ReactSwiftlyTests.swift */; };
 		22C619741BBD08FF00AAF114 /* ReactSwiftlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C619731BBD08FF00AAF114 /* ReactSwiftlyUITests.swift */; };
+		22C619831BBD0B5800AAF114 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C619811BBD0B5800AAF114 /* ReactiveCocoa.framework */; settings = {ASSET_TAGS = (); }; };
+		22C619841BBD0B5800AAF114 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C619821BBD0B5800AAF114 /* Result.framework */; settings = {ASSET_TAGS = (); }; };
+		22C619851BBD0BB100AAF114 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C619811BBD0B5800AAF114 /* ReactiveCocoa.framework */; };
+		22C619861BBD0BB100AAF114 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22C619811BBD0B5800AAF114 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		22C619871BBD0BB100AAF114 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C619821BBD0B5800AAF114 /* Result.framework */; };
+		22C619881BBD0BB100AAF114 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22C619821BBD0B5800AAF114 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		22C619891BBD0BB100AAF114 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				22C619861BBD0BB100AAF114 /* ReactiveCocoa.framework in Embed Frameworks */,
+				22C619881BBD0BB100AAF114 /* Result.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		22C6194D1BBD08FF00AAF114 /* ReactSwiftly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactSwiftly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C619501BBD08FF00AAF114 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +70,8 @@
 		22C6196F1BBD08FF00AAF114 /* ReactSwiftlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactSwiftlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C619731BBD08FF00AAF114 /* ReactSwiftlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactSwiftlyUITests.swift; sourceTree = "<group>"; };
 		22C619751BBD08FF00AAF114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22C619811BBD0B5800AAF114 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveCocoa.framework; sourceTree = "<group>"; };
+		22C619821BBD0B5800AAF114 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +79,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22C619831BBD0B5800AAF114 /* ReactiveCocoa.framework in Frameworks */,
+				22C619851BBD0BB100AAF114 /* ReactiveCocoa.framework in Frameworks */,
+				22C619841BBD0B5800AAF114 /* Result.framework in Frameworks */,
+				22C619871BBD0BB100AAF114 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +126,8 @@
 		22C6194F1BBD08FF00AAF114 /* ReactSwiftly */ = {
 			isa = PBXGroup;
 			children = (
+				22C619811BBD0B5800AAF114 /* ReactiveCocoa.framework */,
+				22C619821BBD0B5800AAF114 /* Result.framework */,
 				22C619501BBD08FF00AAF114 /* AppDelegate.swift */,
 				22C619521BBD08FF00AAF114 /* ViewController.swift */,
 				22C619541BBD08FF00AAF114 /* Main.storyboard */,
@@ -138,6 +167,7 @@
 				22C619491BBD08FF00AAF114 /* Sources */,
 				22C6194A1BBD08FF00AAF114 /* Frameworks */,
 				22C6194B1BBD08FF00AAF114 /* Resources */,
+				22C619891BBD0BB100AAF114 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -400,6 +430,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ReactSwiftly",
+				);
 				INFOPLIST_FILE = ReactSwiftly/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samswiches.ReactSwiftly;
@@ -411,6 +445,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ReactSwiftly",
+				);
 				INFOPLIST_FILE = ReactSwiftly/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samswiches.ReactSwiftly;
