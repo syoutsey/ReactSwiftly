@@ -19,14 +19,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let searchStrings = self.textField.rac_textSignal().toSignalProducer().map { text in text }
+        let searchStrings = self.textField.rac_textSignal().toSignalProducer()
         let searchResults = searchStrings
             .flatMap(.Latest) { query in
                 let name = query as! String
-                let URLRequest = NSURLRequest(URL: NSURL(string: self.localURL + name)!)
+                let request = NSURLRequest(URL: NSURL(string: self.localURL + name)!)
                 
                 return NSURLSession.sharedSession()
-                    .rac_dataWithRequest(URLRequest)
+                    .rac_dataWithRequest(request)
                     .retry(2)
                     .flatMapError { error in
                         print("Network error occurred: \(error)")

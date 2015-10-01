@@ -24,7 +24,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acn-6c-WAv">
-                                <rect key="frame" x="279" y="529.5" width="42" height="20.5"/>
+                                <rect key="frame" x="279" y="239.5" width="42" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,8 +38,14 @@
                             <constraint firstItem="POw-8e-R1s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="87x-zU-Kzh"/>
                             <constraint firstItem="POw-8e-R1s" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KSQ-Hd-f5y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="POw-8e-R1s" secondAttribute="trailing" constant="10" id="bKz-GZ-M43"/>
+                            <constraint firstItem="POw-8e-R1s" firstAttribute="top" secondItem="Acn-6c-WAv" secondAttribute="bottom" constant="25" id="fwB-lc-QU8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Acn-6c-WAv" secondAttribute="bottom" constant="50" id="wJr-jp-M2J"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="wJr-jp-M2J"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="nameLabel" destination="Acn-6c-WAv" id="dbE-WF-2EU"/>
